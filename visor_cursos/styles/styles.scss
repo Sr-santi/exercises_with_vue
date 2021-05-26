@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+#app {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 80px;
+    width: 100%;
+    height: 100vh;
+    background-color: #19231A;
+}
+
+.container {
+    margin: 20px 0px 35px 0px;
+    padding: 20px;
+    outline: none;
+    border: 3px solid transparent;
+    box-shadow: 1px 16px 25px 9px rgba(51, 103, 59, 0.66);
+    border-radius: 25px;
+    width: 400px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    div {
+        display: flex;
+        flex-direction: column;
+        margin: 20px 0px;
+
+        input {
+            outline: none;
+            border-radius: 30px;
+            border: 2px solid rgba(51, 103, 59, 0.66);
+            padding: 15px 10px;
+            width: 250px;
+            margin: 10px 0px;
+            font-size: 18px;
+
+            &::placeholder {
+                font-size: 16px;
+                color: rgb(131, 126, 126);
+            }
+        }
+        
+    }
+
+    button {
+        padding: 15px 5px;
+        width: 150px;
+        border-radius: 25px;
+        border: none;
+        cursor: pointer;
+        font-size: 16px;
+        color: white;
+        background: #33673B;
+        transition: 400ms background-color;
+
+        &:hover {
+            background-color: #CC3F0C;
+        }
+    }
+}
+
+h1,h3 {
+    color: white;
+}
+
+h1 {
+    font-size: 35px;
+}
+
+h3 {
+    margin-bottom: 10px;
+}
+
+.warning {
+    color: #CC3F0C;
+    span {
+        color: white;
+    }
+}
+
+.info_container {
+
+    hr {
+        margin-bottom: 10px;
+    }
+
+    p {
+        color: white;
+        b, strong {
+            color: #CC3F0C;
+        }
+    }
+
+    ol {
+        list-style: none;
+        padding: 20px;
+
+        li {
+            font-size: 16px;
+            margin: 8px 0px;
+            color: white;
+
+            span {
+                color: #CC3F0C;
+            }
+        }
+    }
+}
