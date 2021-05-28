@@ -9,11 +9,19 @@
 </head>
 <body>
     <div id="app">
-        <button>Show Modal</button>
+        <button class="close_button" v-on:click="toggleModal">Show</button>
         
-        <modal></modal>
+        <modal v-bind:title="title" v-show="showModal" v-on:change-visibility="toggleModal">
+            <template v-slot:content>
+                <p>
+                    En la noche más oscura y en el frío más helado yo me alzaré victorioso en la batalla como bravo y valiente guerrero, sabio al elegir sus batallas y con el ánimo resuelto para continuar mi jornada
+                </p>
+                <p><strong>By Sr-santi 💚</strong></p>
+                <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse3.mm.bing.net%2Fth%3Fid%3DOIP.ZLMtvoBW1W373-ri7oTqMAHaIQ%26pid%3DApi&f=1" alt="knight">
+            </template>
+        </modal>
       </div>
-      
+
       <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
       <script src="script.js"></script>
 </body>

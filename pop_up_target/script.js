@@ -1,18 +1,44 @@
 Vue.component('modal', {
+    props : ['title'],
+    data () {
+        return {
+
+        }
+    },
+
+    methods: {
+        close() {
+            this.$emit('change-visibility')
+        }
+    },
+
     template: `
       <div class="modal-mask">
-        <div class="modal-wrapper">
           <div class="modal-container">
-            <h3>title</h3>
-            <div>body</div>
+            <h3>{{title}}</h3>
+            <slot name="content"></slot>
+            <hr>
             <footer>
-              <button>Cerrar</button>
+              <button v-on:click="close">Close</button>
             </footer>
           </div>
-        </div>
       </div>`
   })
   
   new Vue({
-    el: '#app'
+    el: '#app',
+
+    data () {
+        return {
+            title: "Un aprendizaje infinito 📃",
+            showModal: false,
+        }
+    },
+
+    methods: {
+        toggleModal() {
+            this.showModal = !this.showModal
+        }
+    }
+
   })
